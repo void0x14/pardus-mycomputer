@@ -2626,6 +2626,7 @@ Fatih Altun &lt;fatih.altun@pardus.org.tr&gt;</property>
                                     <property name="visible">True</property>
                                     <property name="can-focus">False</property>
                                     <property name="valign">center</property>
+                                    <property name="pixel-size">48</property>
                                     <property name="icon-name">user-home</property>
                                     <property name="icon_size">6</property>
                                   </object>
@@ -2747,6 +2748,7 @@ Fatih Altun &lt;fatih.altun@pardus.org.tr&gt;</property>
                                     <property name="visible">True</property>
                                     <property name="can-focus">False</property>
                                     <property name="valign">center</property>
+                                    <property name="pixel-size">48</property>
                                     <property name="icon-name">video-display</property>
                                     <property name="icon_size">6</property>
                                   </object>
