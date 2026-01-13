@@ -1,3 +1,4 @@
+import asyncio
 import json
 import os
 import subprocess
@@ -1273,14 +1274,15 @@ class MainWindow:
 
     def addDisksToGUI(self):
         # Home:
-        home_info = DiskManager.get_file_info(GLib.get_home_dir())
+        home_info = asyncio.run(DiskManager.get_home_directory_size(GLib.get_home_dir()))
         self.lbl_home_path.set_markup("<small>( {} )</small>".format(GLib.get_home_dir()))
-        self.lbl_home_size.set_label(f"{int(home_info['usage_kb']) / 1000 / 1000:.2f} GB")
+        home_size = GLib.format_size(home_info*1000)
+        self.lbl_home_size.set_label(home_size)
 
         # Root:
         root_info = DiskManager.get_file_info("/")
-        self.lbl_root_free.set_label(f"{int(root_info['free_kb']) / 1000 / 1000:.2f} GB")
-        self.lbl_root_total.set_label(f"{int(root_info['total_kb']) / 1000 / 1000:.2f} GB")
+        self.lbl_root_free.set_label(GLib.format_size(int(root_info['usage_kb'])*1000))
+        self.lbl_root_total.set_label(GLib.format_size(int(root_info['total_kb'])*1000))
         self.pb_root_usage.set_fraction(root_info["usage_percent"])
 
         # if root usage >= 0.9 then add destructive color

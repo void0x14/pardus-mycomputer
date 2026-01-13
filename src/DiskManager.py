@@ -1,5 +1,35 @@
+import asyncio
 import subprocess
 
+
+async def get_home_directory_size(path):
+    """
+    Calculate the total disk usage of a directory asynchronously.
+
+    :param path: Directory path to calculate size for
+    """
+    proc = await asyncio.create_subprocess_exec(
+        "du",
+        "--block-size=1000",
+        "-s",
+        path,
+        stdout=asyncio.subprocess.PIPE,
+        stderr=asyncio.subprocess.DEVNULL
+    )
+
+    stdout, _ = await proc.communicate()
+
+    if not stdout:
+        return 0
+
+    size = stdout.decode().split()[0]
+    return int(size)
+
+async def size(path):
+    """
+    Wrapper for get_home_directory_size.
+    """
+    return await get_home_directory_size(path)
 
 def get_file_info(file, network=False):
     values = None
