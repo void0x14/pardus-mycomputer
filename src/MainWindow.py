@@ -1271,16 +1271,35 @@ class MainWindow:
         # self.tryMountVolume(row)
         self.showVolumeSizes(row)
 
+    def get_home_directory_size_async(self, path, callback):
+        proc = Gio.Subprocess.new(
+            ["du", "--block-size=1000", "-s", path],
+            Gio.SubprocessFlags.STDOUT_PIPE |
+            Gio.SubprocessFlags.STDERR_SILENCE
+        )
+        proc.communicate_utf8_async(None, None, self._on_du_finished, callback)
+
+    def _on_du_finished(self, proc, result, callback):
+        try:
+            success, stdout, stderr = proc.communicate_utf8_finish(result)
+            size = int(stdout.split()[0]) if success and stdout else 0
+        except Exception:
+            size = 0
+        callback(size)
+
+    def get_home_directory_size(self, size_kb):
+        self.lbl_home_size.set_label(GLib.format_size(size_kb*1000))
+
     def addDisksToGUI(self):
         # Home:
-        home_info = DiskManager.get_file_info(GLib.get_home_dir())
+        self.lbl_home_size.set_label(_("Calculating..."))
         self.lbl_home_path.set_markup("<small>( {} )</small>".format(GLib.get_home_dir()))
-        self.lbl_home_size.set_label(f"{int(home_info['usage_kb']) / 1000 / 1000:.2f} GB")
+        self.get_home_directory_size_async(GLib.get_home_dir(), self.get_home_directory_size)
 
         # Root:
         root_info = DiskManager.get_file_info("/")
-        self.lbl_root_free.set_label(f"{int(root_info['free_kb']) / 1000 / 1000:.2f} GB")
-        self.lbl_root_total.set_label(f"{int(root_info['total_kb']) / 1000 / 1000:.2f} GB")
+        self.lbl_root_free.set_label(GLib.format_size(int(root_info['usage_kb'])*1000))
+        self.lbl_root_total.set_label(GLib.format_size(int(root_info['total_kb'])*1000))
         self.pb_root_usage.set_fraction(root_info["usage_percent"])
 
         # if root usage >= 0.9 then add destructive color
