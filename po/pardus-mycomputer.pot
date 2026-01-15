@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-14 13:59+0300\n"
+"POT-Creation-Date: 2026-01-15 15:56+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -249,63 +249,63 @@ msgstr ""
 msgid "Home"
 msgstr ""
 
-#: ui/MainWindow.glade:2778
+#: ui/MainWindow.glade:2775
 msgid "Root"
 msgstr ""
 
-#: ui/MainWindow.glade:2851
+#: ui/MainWindow.glade:2845
 msgid "/"
 msgstr ""
 
-#: ui/MainWindow.glade:2966
+#: ui/MainWindow.glade:2960
 msgid "Hard Drives"
 msgstr ""
 
-#: ui/MainWindow.glade:3047
+#: ui/MainWindow.glade:3041
 msgid "Removable Drives"
 msgstr ""
 
-#: ui/MainWindow.glade:3156
+#: ui/MainWindow.glade:3150
 msgid "Hide places section"
 msgstr ""
 
-#: ui/MainWindow.glade:3196
+#: ui/MainWindow.glade:3190
 msgid "Close app when Main directories are opened"
 msgstr ""
 
-#: ui/MainWindow.glade:3236
+#: ui/MainWindow.glade:3230
 msgid "Close app when Hard Drives are opened"
 msgstr ""
 
-#: ui/MainWindow.glade:3276
+#: ui/MainWindow.glade:3270
 msgid "Close app when Removable Drives are opened"
 msgstr ""
 
-#: ui/MainWindow.glade:3316
+#: ui/MainWindow.glade:3310
 msgid "Auto refresh disks (refresh time: 1.5 seconds)"
 msgstr ""
 
-#: ui/MainWindow.glade:3356
+#: ui/MainWindow.glade:3350
 msgid "Remember window size"
 msgstr ""
 
-#: ui/MainWindow.glade:3396
+#: ui/MainWindow.glade:3390
 msgid "Hide Icon on Desktop"
 msgstr ""
 
-#: ui/MainWindow.glade:3436
+#: ui/MainWindow.glade:3430
 msgid "Use dark theme"
 msgstr ""
 
-#: ui/MainWindow.glade:3505
+#: ui/MainWindow.glade:3499
 msgid "Restore Defaults"
 msgstr ""
 
-#: ui/MainWindow.glade:3550 src/MainWindow.py:2382 src/MainWindow.py:2400
+#: ui/MainWindow.glade:3544 src/MainWindow.py:2382 src/MainWindow.py:2400
 msgid "Home Page"
 msgstr ""
 
-#: ui/MainWindow.glade:3665
+#: ui/MainWindow.glade:3659
 msgid "My Computer"
 msgstr ""
 
@@ -370,8 +370,12 @@ msgstr ""
 msgid "Add new"
 msgstr ""
 
-#: src/MainWindow.py:1003
-msgid "is free of"
+#: src/MainWindow.py:1003 src/MainWindow.py:1301
+msgid "free"
+msgstr ""
+
+#: src/MainWindow.py:1003 src/MainWindow.py:1302
+msgid "total"
 msgstr ""
 
 #: src/MainWindow.py:1088
@@ -400,6 +404,10 @@ msgstr ""
 
 #: src/MainWindow.py:1227
 msgid "Information"
+msgstr ""
+
+#: src/MainWindow.py:1291
+msgid "used"
 msgstr ""
 
 #: src/MainWindow.py:1295
