@@ -991,16 +991,16 @@ class MainWindow:
 
             if file_info is not None:
 
-                free_kb = int(file_info['free_kb'])
-                total_kb = int(file_info['total_kb'])
+                free_kb = GLib.format_size(int(file_info['free_kb']) * 1000)
+                total_kb = GLib.format_size(int(file_info['total_kb']) * 1000)
 
                 # Show values on UI
                 row_volume._lbl_volume_name.set_markup(
                     f'<b>{GLib.markup_escape_text(display_name, -1)}</b>'
                     f'<span size="small">( {GLib.markup_escape_text(mount_point, -1)} )</span>')
                 row_volume._lbl_volume_size_info.set_markup(
-                    "<span size='small'><b>{:.2f} GB</b> {} {:.2f} GB</span>".format(
-                        free_kb / 1000 / 1000, _("is free of"), total_kb / 1000 / 1000))
+                    "<span size='small'>{} {} / {} {}</span>".format(
+                        free_kb, _("free"), total_kb, _("total")))
                 row_volume._pb_volume_size.set_fraction(file_info["usage_percent"])
 
                 # if volume usage >= 0.9 then add destructive color
@@ -1288,7 +1288,7 @@ class MainWindow:
         callback(size)
 
     def get_home_directory_size(self, size_kb):
-        self.lbl_home_size.set_label(GLib.format_size(size_kb*1000))
+        self.lbl_home_size.set_label("{} {}".format(GLib.format_size(size_kb*1000), _("used")))
 
     def addDisksToGUI(self):
         # Home:
@@ -1298,8 +1298,8 @@ class MainWindow:
 
         # Root:
         root_info = DiskManager.get_file_info("/")
-        self.lbl_root_free.set_label(GLib.format_size(int(root_info['usage_kb'])*1000))
-        self.lbl_root_total.set_label(GLib.format_size(int(root_info['total_kb'])*1000))
+        self.lbl_root_free.set_label("{} {}".format(GLib.format_size(int(root_info['free_kb'])*1000), _("free")))
+        self.lbl_root_total.set_label("{} {}".format(GLib.format_size(int(root_info['total_kb'])*1000), _("total")))
         self.pb_root_usage.set_fraction(root_info["usage_percent"])
 
         # if root usage >= 0.9 then add destructive color
