@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-14 13:59+0300\n"
+"POT-Creation-Date: 2026-01-15 15:56+0300\n"
 "PO-Revision-Date: 2024-10-23 01:12+0100\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: \n"
@@ -252,63 +252,63 @@ msgstr "dav:// ou davs://"
 msgid "Home"
 msgstr "Pasta pessoal"
 
-#: ui/MainWindow.glade:2778
+#: ui/MainWindow.glade:2775
 msgid "Root"
 msgstr "Root"
 
-#: ui/MainWindow.glade:2851
+#: ui/MainWindow.glade:2845
 msgid "/"
 msgstr ""
 
-#: ui/MainWindow.glade:2966
+#: ui/MainWindow.glade:2960
 msgid "Hard Drives"
 msgstr "Discos rígidos"
 
-#: ui/MainWindow.glade:3047
+#: ui/MainWindow.glade:3041
 msgid "Removable Drives"
 msgstr "Unidades removíveis"
 
-#: ui/MainWindow.glade:3156
+#: ui/MainWindow.glade:3150
 msgid "Hide places section"
 msgstr "Ocultar secção de locais"
 
-#: ui/MainWindow.glade:3196
+#: ui/MainWindow.glade:3190
 msgid "Close app when Main directories are opened"
 msgstr "Fechar a aplicação quando os diretórios principais são abertos"
 
-#: ui/MainWindow.glade:3236
+#: ui/MainWindow.glade:3230
 msgid "Close app when Hard Drives are opened"
 msgstr "Fechar a aplicação quando os discos rígidos são abertos"
 
-#: ui/MainWindow.glade:3276
+#: ui/MainWindow.glade:3270
 msgid "Close app when Removable Drives are opened"
 msgstr "Fechar a aplicação quando os dispositivos removíveis são abertos"
 
-#: ui/MainWindow.glade:3316
+#: ui/MainWindow.glade:3310
 msgid "Auto refresh disks (refresh time: 1.5 seconds)"
 msgstr "Atualizar discos automaticamente (tempo de atualização 1.5 segundos)"
 
-#: ui/MainWindow.glade:3356
+#: ui/MainWindow.glade:3350
 msgid "Remember window size"
 msgstr "Lembrar tamanho da janela"
 
-#: ui/MainWindow.glade:3396
+#: ui/MainWindow.glade:3390
 msgid "Hide Icon on Desktop"
 msgstr "Ocultar ícone na área de trabalho"
 
-#: ui/MainWindow.glade:3436
+#: ui/MainWindow.glade:3430
 msgid "Use dark theme"
 msgstr "Usar tema escuro"
 
-#: ui/MainWindow.glade:3505
+#: ui/MainWindow.glade:3499
 msgid "Restore Defaults"
 msgstr "Restaurar predefinições"
 
-#: ui/MainWindow.glade:3550 src/MainWindow.py:2382 src/MainWindow.py:2400
+#: ui/MainWindow.glade:3544 src/MainWindow.py:2382 src/MainWindow.py:2400
 msgid "Home Page"
 msgstr "Página Inicial"
 
-#: ui/MainWindow.glade:3665
+#: ui/MainWindow.glade:3659
 msgid "My Computer"
 msgstr "Meu Computador"
 
@@ -373,9 +373,14 @@ msgstr "Ficheiros recentes"
 msgid "Add new"
 msgstr "Adicionar novo"
 
-#: src/MainWindow.py:1003
-msgid "is free of"
-msgstr "está livre de"
+#: src/MainWindow.py:1003 src/MainWindow.py:1301
+msgid "free"
+msgstr ""
+
+#: src/MainWindow.py:1003 src/MainWindow.py:1302
+#, fuzzy
+msgid "total"
+msgstr "Total"
 
 #: src/MainWindow.py:1088
 msgid "Disk is available, click to mount."
@@ -404,6 +409,10 @@ msgstr "Remover marcador"
 #: src/MainWindow.py:1227
 msgid "Information"
 msgstr "Informação"
+
+#: src/MainWindow.py:1291
+msgid "used"
+msgstr ""
 
 #: src/MainWindow.py:1295
 msgid "Calculating..."
@@ -496,6 +505,9 @@ msgstr "# exemplo de linha é como abaixo"
 #: src/UserSettings.py:297
 msgid "# note: remove the hash to make it appear"
 msgstr "# nota: remover o sinal cardinal para o fazer aparecer"
+
+#~ msgid "is free of"
+#~ msgstr "está livre de"
 
 #~ msgid "Places"
 #~ msgstr "Locais"

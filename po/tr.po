@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-14 13:59+0300\n"
-"PO-Revision-Date: 2026-01-14 14:00+0300\n"
+"POT-Creation-Date: 2026-01-15 15:56+0300\n"
+"PO-Revision-Date: 2026-01-15 15:59+0300\n"
 "Last-Translator: busra.cagliyan <busra.cagliyan@pardus.org.tr>\n"
 "Language-Team: Turkish <dev@pardus.org.tr>\n"
 "Language: tr\n"
@@ -251,63 +251,63 @@ msgstr "dav:// veya davs://"
 msgid "Home"
 msgstr "Ev"
 
-#: ui/MainWindow.glade:2778
+#: ui/MainWindow.glade:2775
 msgid "Root"
 msgstr "Kök Dizin"
 
-#: ui/MainWindow.glade:2851
+#: ui/MainWindow.glade:2845
 msgid "/"
-msgstr ""
+msgstr "/"
 
-#: ui/MainWindow.glade:2966
+#: ui/MainWindow.glade:2960
 msgid "Hard Drives"
 msgstr "Sabit Diskler"
 
-#: ui/MainWindow.glade:3047
+#: ui/MainWindow.glade:3041
 msgid "Removable Drives"
 msgstr "Çıkarılabilir Diskler"
 
-#: ui/MainWindow.glade:3156
+#: ui/MainWindow.glade:3150
 msgid "Hide places section"
 msgstr "Yerler bölümünü gizle"
 
-#: ui/MainWindow.glade:3196
+#: ui/MainWindow.glade:3190
 msgid "Close app when Main directories are opened"
 msgstr "Ana dizinler açıldığında uygulamayı kapat"
 
-#: ui/MainWindow.glade:3236
+#: ui/MainWindow.glade:3230
 msgid "Close app when Hard Drives are opened"
 msgstr "Sabit Diskler açıldığında uygulamayı kapat"
 
-#: ui/MainWindow.glade:3276
+#: ui/MainWindow.glade:3270
 msgid "Close app when Removable Drives are opened"
 msgstr "Çıkarılabilir Diskler açıldığında uygulamayı kapat"
 
-#: ui/MainWindow.glade:3316
+#: ui/MainWindow.glade:3310
 msgid "Auto refresh disks (refresh time: 1.5 seconds)"
 msgstr "Diskleri otomatik yenile (yenileme süresi: 1,5 saniye)"
 
-#: ui/MainWindow.glade:3356
+#: ui/MainWindow.glade:3350
 msgid "Remember window size"
 msgstr "Pencere boyutunu hatırla"
 
-#: ui/MainWindow.glade:3396
+#: ui/MainWindow.glade:3390
 msgid "Hide Icon on Desktop"
 msgstr "Masaüstünde Simgesini Gizle"
 
-#: ui/MainWindow.glade:3436
+#: ui/MainWindow.glade:3430
 msgid "Use dark theme"
 msgstr "Koyu tema kullan"
 
-#: ui/MainWindow.glade:3505
+#: ui/MainWindow.glade:3499
 msgid "Restore Defaults"
 msgstr "Varsayılanları Geri Yükle"
 
-#: ui/MainWindow.glade:3550 src/MainWindow.py:2382 src/MainWindow.py:2400
+#: ui/MainWindow.glade:3544 src/MainWindow.py:2382 src/MainWindow.py:2400
 msgid "Home Page"
 msgstr "Ana Sayfa"
 
-#: ui/MainWindow.glade:3665
+#: ui/MainWindow.glade:3659
 msgid "My Computer"
 msgstr "Bilgisayarım"
 
@@ -372,9 +372,13 @@ msgstr "Son dosyalar"
 msgid "Add new"
 msgstr "Yeni ekle"
 
-#: src/MainWindow.py:1003
-msgid "is free of"
-msgstr "boş, toplam"
+#: src/MainWindow.py:1003 src/MainWindow.py:1301
+msgid "free"
+msgstr "boş"
+
+#: src/MainWindow.py:1003 src/MainWindow.py:1302
+msgid "total"
+msgstr "toplam"
 
 #: src/MainWindow.py:1088
 msgid "Disk is available, click to mount."
@@ -403,6 +407,10 @@ msgstr "Yer İmini Kaldır"
 #: src/MainWindow.py:1227
 msgid "Information"
 msgstr "Bilgi"
+
+#: src/MainWindow.py:1291
+msgid "used"
+msgstr "kullanılıyor"
 
 #: src/MainWindow.py:1295
 msgid "Calculating..."
@@ -495,6 +503,9 @@ msgstr "# örnek satır aşağıdaki gibidir"
 #: src/UserSettings.py:297
 msgid "# note: remove the hash to make it appear"
 msgstr "# not: görünmesini sağlamak için kare işareti kaldırın"
+
+#~ msgid "is free of"
+#~ msgstr "boş, toplam"
 
 #~ msgid "Places"
 #~ msgstr "Yerler"
